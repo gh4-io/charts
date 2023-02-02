@@ -26,7 +26,8 @@ jobs:
         with:
           path: charts
           fetch-depth: 2
-      - id: 'tree out command'
+      - id: tree-out
+        name: "Tree out command"
         run: tree .
 
   update-index:
