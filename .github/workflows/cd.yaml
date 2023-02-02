@@ -6,11 +6,7 @@ on:
     paths:
       - 'charts/papermerge/**'
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Execute Me'
-        default: 'World'
-        required: true
+    inputs: []
 
 env:
   GH_API_TOKEN: ${{ secrets.SOME_SECRET }}
