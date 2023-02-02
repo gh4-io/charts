@@ -1,0 +1,49 @@
+name: 'Index Updater'
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'charts/papermerge/**'
+
+env:
+  GH_API_TOKEN: ${{ secrets.SOME_SECRET }}
+
+jobs:
+  get-charts:
+    runs-on: ubuntu-latest
+    steps:
+      - id: command-get-charts
+        name: 'echo command'
+        run: |
+          echo "hello world" >> $GITHUBJ_OUTPUT
+
+  update-index:
+    runs-on: ubuntu-latest
+    needs:
+      - get-charts
+    steps:
+      - id: command-update-index
+        name: 'echo command'
+        run: |
+          echo "update index" >> $GITHUBJ_OUTPUT
+
+  upload-artifact:
+    runs-on: ubuntu-latest
+    needs:
+      - update-index
+    steps:
+      - id: command-upload
+        name: 'echo command'
+        run: |
+          echo "uploaded" >> $GITHUBJ_OUTPUT
+
+  publish:
+    runs-on: ubuntu-latest
+    needs:
+      - upload-artifact
+    steps:
+      - id: command-publish
+        name: 'echo command'
+        run: |
+          echo "published" >> $GITHUBJ_OUTPUT
