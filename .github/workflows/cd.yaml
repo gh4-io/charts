@@ -27,7 +27,8 @@ jobs:
           path: charts
           fetch-depth: 2
       - id: 'tree out command'
-        run: 'tree .'
+        run: 
+          - tree .
 
   update-index:
     runs-on: ubuntu-latest
@@ -36,8 +37,7 @@ jobs:
     steps:
       - id: command-update-index
         name: 'echo command'
-        run: |
-          echo "update index"
+        run: tree .
 
   upload-artifact:
     runs-on: ubuntu-latest
