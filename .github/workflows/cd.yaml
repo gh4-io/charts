@@ -22,7 +22,7 @@ jobs:
       - id: command-get-charts
         name: 'echo command'
         run: |
-          echo "hello world" >> $GITHUB_OUTPUT
+          echo "hello world"
 
   update-index:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
       - id: command-update-index
         name: 'echo command'
         run: |
-          echo "update index" >> $GITHUB_OUTPUT
+          echo "update index"
 
   upload-artifact:
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
       - id: command-upload
         name: 'echo command'
         run: |
-          echo "uploaded" >> $GITHUB_OUTPUT
+          echo "uploaded"
 
   publish:
     runs-on: ubuntu-latest
@@ -52,4 +52,4 @@ jobs:
       - id: command-publish
         name: 'echo command'
         run: |
-          echo "published" >> $GITHUB_OUTPUT
+          echo "published"
