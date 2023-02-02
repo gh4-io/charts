@@ -22,9 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: command-get-charts
-        name: 'echo command'
-        run: |
-          echo "hello world"
+        uses: actions/checkout@v3
+        with:
+          path: charts
+          fetch-depth: 2
+      - id: 'tree out command'
+        run: 'tree .'
 
   update-index:
     runs-on: ubuntu-latest
